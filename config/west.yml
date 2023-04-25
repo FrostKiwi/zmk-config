@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kyria
       url-base: https://github.com/petejohanson
+    - name: touchpanel
+      url-base: https://github.com/FrostKiwi
   projects:
     - name: zmk
-      remote: kyria
-      revision: shields/kyria-rev3
+      remote: touchpanel
+      revision: mouse-3.2
       import: app/west.yml
   self:
     path: config
