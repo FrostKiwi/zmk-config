@@ -38,13 +38,13 @@
         };
         RAISE_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |      |      |      |      |                                         |PageUp|  7 & |  8 * |  9 ( |  0 ) |      |
-            // |       |      |      |      |      |      |                                         |PageDn|  4 $ |  5 % |  6 ^ |  - _ | DEL  |
+            // |  ~ `  |      |      |  UP  |      |      |                                         |PageUp|  7 & |  8 * |  9 ( |  0 ) |      |
+            // |       |      | LEFT | DOWN |RIGHT |      |                                         |PageDn|  4 $ |  5 % |  6 ^ |  - _ | DEL  |
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |  1 ! |  2 @ |  3 # |  = + |      |
             //                       |      |      |      |      |      |      |      |      |      |      | Home |  End |
             bindings = <
-            &trans &trans &trans &trans &trans &trans              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
-            &trans &trans &trans &trans &trans &trans                    &kp PG_DN &kp N4 &kp N5 &kp N6 &kp MINUS &kp DEL
+            &kp GRAVE &trans &trans &kp UP &trans &trans              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
+            &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans                    &kp PG_DN &kp N4 &kp N5 &kp N6 &kp MINUS &kp DEL
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &kp N1 &kp N2 &kp N3 &kp EQUAL &trans
                                  &trans &trans &trans &trans &trans        &trans &trans &trans &kp HOME &kp END
             >;
