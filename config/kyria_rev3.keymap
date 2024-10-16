@@ -14,10 +14,6 @@
 #define RAISE 1
 #define LOWER 2
 
-
-&left_encoder { resolution = <2>; };
-&right_encoder { resolution = <2>; };
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -29,9 +25,9 @@
             // | LCTRL |  Z  |  X  |  C   |  V   |  B   | NONE    | V       |  | V       | NONE    |  N   |  M    |  ,    |  .   |   /   | \ |
             //                     | ESC  | GUI  | LALT |  RET    |   LClick|  |   RAISE |  SPACE  | LOWER  | R_Bracket  | L_Bracket |
             bindings = <
-            &kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-            &kp LSHFT   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &none &kp V                &kp V &none &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+            &kp TAB   &kp Q &kp W &kp E &kp R             &kp T                       &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+            &kp LSHFT   &kp A &kp S &kp D &kp F           &kp G                       &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+            &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &none &kp V                     &kp V &none &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                   &kp ESC  &kp LGUI &kp LALT &kp RET &mkp LCLK      &mo RAISE &kp SPACE &mo LOWER &kp RBKT &kp LBKT
             >;
 
@@ -44,9 +40,9 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |  1 ! |  2 @ |  3 # |  = + |      |
             //                       |      |   |   |   | RClick |      |      |      |      |      | Home |  End |
             bindings = <
-            &kp GRAVE &trans &trans &kp UP &trans &trans              &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
+            &kp GRAVE &trans &trans &kp UP     &trans &trans                    &kp PG_UP &kp N7 &kp N8 &kp N9 &kp N0 &trans
             &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans                    &kp PG_DN &kp N4 &kp N5 &kp N6 &kp MINUS &kp DEL
-            &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &kp N1 &kp N2 &kp N3 &kp EQUAL &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans         &trans &trans &trans &kp N1 &kp N2 &kp N3 &kp EQUAL &trans
                                  &trans &trans &trans &trans &mkp RCLK      &trans &trans &trans &kp HOME &kp END
             >;
 
@@ -59,13 +55,13 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |  BT0 |  BT1 |  BT2 |  Next Effect    |   Prev Effect   |
             //                       |  BT Clear |   |   |   | MidClick |      |  |      |      |      |      |      |   RGB ON   |   RGB OFF   |
             bindings = <
-            &trans &trans &trans &trans &trans &trans              &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans                    &trans &bt BT_SEL 3 &bt BT_SEL 4 &trans &rgb_ug RGB_BRI &rgb_ug RGB_BRD
+            &trans &trans &trans &trans &trans &trans                             &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans                             &trans &bt BT_SEL 3 &bt BT_SEL 4 &trans &rgb_ug RGB_BRI &rgb_ug RGB_BRD
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &rgb_ug RGB_EFF &rgb_ug RGB_EFR
                                  &bt BT_CLR &trans &trans &trans &mkp MCLK     &trans &trans &trans &rgb_ug RGB_ON &rgb_ug RGB_OFF
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
