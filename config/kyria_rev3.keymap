@@ -15,7 +15,7 @@
 #define LOWER 2
 
 &sensors {
-    triggers-per-rotation = <18>;
+    triggers-per-rotation = <36>;
 };
 
 / {
