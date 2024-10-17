@@ -15,7 +15,7 @@
 #define LOWER 2
 
 &sensors {
-    triggers-per-rotation = <36>;
+    triggers-per-rotation = <38>;
 };
 
 / {
@@ -23,8 +23,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   BackSPC  |
+            // ---------------------------------------------------------------------------------------------------------------------------------  // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   BackSPC  |
             // |  SHIFT  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   "'  |
             // | LCTRL |  Z  |  X  |  C   |  V   |  B   | NONE    | V       |  | V       | NONE    |  N   |  M    |  ,    |  .   |   /   | \ |
             //                     | ESC  | GUI  | LALT |  RET    |   LClick|  |   RAISE |  SPACE  | LOWER  | R_Bracket  | L_Bracket |
