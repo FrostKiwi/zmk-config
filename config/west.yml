@@ -4,12 +4,14 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: crides
       url-base: https://github.com/crides
+    - name: frostkiwi
+      url-base: https://github.com/FrostKiwi      
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: crides
-      revision: cirque-trackpad
+      remote: frostkiwi
+      revision: main
       import: app/west.yml
   self:
     path: config
