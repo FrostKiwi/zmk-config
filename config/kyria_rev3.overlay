@@ -28,4 +28,8 @@
         sleep;
         no-taps;
     };
+
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
 };
