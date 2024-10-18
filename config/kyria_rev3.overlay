@@ -1,7 +1,8 @@
 / {
     chosen {
         zmk,kscan = &kyria_kscan;
-        zmk,encoder = &kyria_encoder;
+        zmk,encoder-left = &left_encoder;
+        zmk,encoder-right = &right_encoder;
     };
 
     glidepoint_input {
