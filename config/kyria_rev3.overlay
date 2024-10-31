@@ -1,35 +1,36 @@
-/ {
-    chosen {
-        zmk,kscan = &kyria_kscan;
-        zmk,encoder-left = &left_encoder;
-        zmk,encoder-right = &right_encoder;
-    };
-
-    glidepoint_input {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint>;
-
-        // Optional settings you can uncomment as needed
-        // xy-swap;
-        // y-invert;
-        // x-invert;
-    };
-};
-
-&i2c1 {
-    status = "okay";
-    
-    glidepoint: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;  // I2C address of the trackpad
-        status = "okay";
-        dr-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH)>;  // Data ready pin
-        sensitivity = "4x";
-        sleep;
-        no-taps;
-    };
-
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-1 = <&i2c1_sleep>;
-    pinctrl-names = "default", "sleep";
-};
+/// {
+//    chosen {
+//        zmk,kscan = &kyria_kscan;
+//        zmk,encoder-left = &left_encoder;
+//        zmk,encoder-right = &right_encoder;
+//    };
+//
+//    glidepoint_input {
+//        compatible = "zmk,input-listener";
+//        device = <&glidepoint>;
+//
+//        // Optional settings you can uncomment as needed
+//        // xy-swap;
+//        // y-invert;
+//        // x-invert;
+//    };
+//};
+//
+//&i2c1 {
+//    status = "okay";
+//    
+//    glidepoint: glidepoint@2a {
+//        compatible = "cirque,pinnacle";
+//        reg = <0x2a>;  // I2C address of the trackpad
+//        status = "okay";
+//        dr-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH)>;  // Data ready pin
+//        sensitivity = "4x";
+//        sleep;
+//        no-taps;
+//    };
+//
+//    pinctrl-0 = <&i2c1_default>;
+//    pinctrl-1 = <&i2c1_sleep>;
+//    pinctrl-names = "default", "sleep";
+//};
+//
